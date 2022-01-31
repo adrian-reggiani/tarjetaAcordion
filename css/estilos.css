@@ -52,23 +52,32 @@ h2{
     font-size: 1rem;
     font-weight: 400;
     color: var(--azulOscuro);
-    display: inline;
+    
+
 }
 
 p{
     font-size: 0.82rem;
     color: var(--azulMOscuro);
+    margin: -10px;
     
 }
 
 hr{
    color: var(--azulLGrisado);
    opacity: 0.5;
-   margin-top: 1rem;
+   margin: 0.5rem 0;
+   
 }
+
+.imagen, .informacion{
+    width: 25rem;
+    
+ }
 
 .informacion{
     margin: 2rem;
+    padding-right: 2.5rem;
 }
 
 .informacion h2, p{ 
@@ -76,40 +85,35 @@ hr{
 }
 
 .informacion__contenido{
-    display: inline-block;
+    display: flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.imagen, .informacion{
-   width: 25rem;
+.imagen{
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position-x: -29rem;
+    background-position-y: -15rem;
+    position: relative;
 }
 
-.imagen__fondo{
-    position: absolute;
-    width: 20rem;
-    top: 0;
-    left: 0;
-
+.imagen__monitor{
+    height: 100%;
+    background-image: url(/images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: -4rem;
+    background-position-y: 3rem;
 }
 
 .imagen__caja{
     position: absolute;
-    top: 157px;
-    left: -93px;
-}
-
-.imagen__monitor{
-    position: absolute;
+    width:9rem;
+    left: -4.5rem;
+    top: 11rem;
 }
 
 
