@@ -29,7 +29,7 @@ body{
 
 .contenedor{
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 100%;
     height: 28rem;
     display: flex;
     border-radius: 1rem;
@@ -57,17 +57,33 @@ h2{
 }
 
 p{
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: var(--azulMOscuro);
-    margin: -10px;
-    
+    margin: 0.5rem 0 1rem;  
 }
 
 hr{
    color: var(--azulLGrisado);
    opacity: 0.5;
-   margin: 0.5rem 0;
-   
+}
+
+a{
+    text-decoration: none;
+
+}
+
+a:visited{
+    font-weight: 400;
+    color: var(--azulOscuro);
+}
+
+a:hover{
+    color: var(--rojoClaro);
+}
+/*Clases */
+
+.flecha{
+    padding: 1rem;
 }
 
 .imagen, .informacion{
@@ -80,16 +96,23 @@ hr{
     padding-right: 2.5rem;
 }
 
-.informacion h2, p{ 
-    margin: 1rem 0;    
-}
-
 .informacion__contenido{
     display: flex;
     height: 2.5rem;
     align-items: center;
     justify-content: space-between;
 }
+
+.noMostrar{
+    display: none;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+
+
 
 .imagen{
     background-image: url(/images/bg-pattern-desktop.svg);
@@ -116,4 +139,8 @@ hr{
     top: 11rem;
 }
 
+
+.flecha--invertida{
+    transform: rotate(180deg);
+}
 
