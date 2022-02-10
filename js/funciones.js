@@ -1,40 +1,41 @@
-let parrafo = document.querySelector('.parrafo1');
-p2 = document.querySelector('.parrafo2').classList[1];
+
+let ultimoParrafo = document.querySelector('.parrafo2');
+let ultimoFlecha = document.querySelector('.flecha2');
+let ultimoTitulo = document.querySelector('.titulo2');
+
 
 // invertir flecha
 
-function invertir(e , f) {
-    
+function invertir(e){
+    let parrafo = document.querySelector(`.parrafo${e}`);
     let flecha = document.querySelector(`.flecha${e}`);
-    flecha = flecha.classList.toggle('flecha--invertida');
-   /*  cerrar(); */
+    let titulo = document.querySelector(`.titulo${e}`);
 
-// H2 cambiarlo a bold
-    if (flecha == true){
-        let negrita1 = document.querySelector(`.titulo${e}`).style.fontWeight="700"; 
-        parrafo = document.querySelector(`.parrafo${e}`);
-        parrafo.classList.remove('noMostrar');// Mostrar un parrafo
-        
+    if(ultimoParrafo != parrafo) {
+
+        //Abrir/Cerrar Bloque
+
+        parrafo.classList.remove('noMostrar');
+        flecha.classList.add('flecha--invertida');
+        titulo.style.fontWeight="700";
+
+        //Cierro el anterior
+        if(ultimoParrafo) {
+            ultimoParrafo.classList.add('noMostrar');
+            ultimoFlecha.classList.remove('flecha--invertida');
+            ultimoTitulo.style.fontWeight="";
+
+            ultimoParrafo = parrafo;
+            ultimoFlecha = flecha;
+            ultimoTitulo = titulo;
+        }
     }
-    else{
-        let negrita1 = document.querySelector(`.titulo${e}`).style.fontWeight="";
-        parrafo.classList.add('noMostrar');//Borrar Parrafo
-    } 
-} 
+
+
+}
 
 
 
 // Que se vea uno a la vez
 
-//Que quede uno desde el principio
 
-function cerrar(){
-    if(p2 == "" ){
-        p = document.querySelector('.parrafo2').classList.add('noMostrar');
-        titulo = document.querySelector('.titulo2').classList.remove('bold');
-        document.querySelector('.flecha2').classList.remove('flecha--invertida');   
-    }
-    
-    
-    
-}
